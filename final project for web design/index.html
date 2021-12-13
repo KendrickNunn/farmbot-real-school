@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>public farm bot</title>
+	<link rel="shortcut icon" href="images/ui/tabphotoicon1.png"/>
+	<link rel="stylesheet" type="text/css" href="page1.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class=main>
+<div class=mainbox>
+<!--big white box in the backround way back( box where all the icons sit on)----------------------------------------------->
+	<img id=mainlayoutbox src="images/ui/mainlayoutbox.png">
+</div>
+<!--bubble for the control bar/ where the navigation and camera emblems sit----------------------------------------------->
+<div class=nav_header>
+	<img id=nav src="images/topbarheaders/nav.png">
+</div>
+<!--this is the page redirection buttons (crosshair and camra logo). redirects to page 1 and 2---------------------------->
+<div class=navigationbutton>
+	<input type="image" width=50px height=50px src=images/topbarheaders/control.png onclick="parent.location='index.html'">
+</div>
+
+<div class=camera>
+	<input type="image" width="50px" height="50px" src=images/topbarheaders/cam.png onclick="parent.location='page2.html'">
+</div> 
+<!-----header on page 1 that says navigation----------------------------------------------------------------------------->
+<div class=tabname>
+	<img id=owtabname width="420px" height="50px" src="images/topbarheaders/navigation.png">
+
+<!-- backround big pink boxes ------------------------------------------------------------------------------------------->
+</div>
+<div class="forcam">
+	<img id=cambackid width="800px" height="665px" src="images/ui/forcamnav.png">
+</div>
+<div class=behindarrows>
+	<img id=behind width=530px height= 595px src="images/ui/navarrowbehind.png">
+</div>
+</div>
+<!-- read me------------------------------------------------------------------------------------------------------------->
+
+<div id="divforreadmebutton">
+	<input type="button" id=readme >
+</div>
+<p id="liluziwatch">click for instructions<br><br>click me</p>
+
+<!-- text input---------------------------------------------------------------------------------------------------------->
+<div id="boxformovement">
+<p id="passage1">how much do you want to move.please type a number<br>the incremeant being moved is in (mm) <br> type below</p>
+<input type="text" id="numbsinput" placeholder="type here">
+<div id="numbsbox"></div>
+</div>
+<!-- buttons arrows + home move/find --------------------------------------------------------------------------->
+<div class=buttonsmain>
+<div class=box></div>
+<div class="boxbehind arrows">
+	
+</div>
+<div class=left>
+	<input type="image" id="leftclickbutton" height= 100px width = 100px src=images/arrows/left.png onclick="">
+</div>
+
+<div class=right>
+	<input type="image" id="rightclickbutton" height= 100px width = 100px src=images/arrows/right.png onclick="">
+</div>
+
+
+<div class=up>
+	<input type="image" id="upclickbutton" height= 100px width = 100px src=images/arrows/up.png onclick="">
+</div>
+
+
+<div class=down>
+	<input type="image" id="downclickbutton" height= 100px width = 100px src=images/arrows/down.png onclick="">
+</div>
+
+<div class=lift>
+	<input type="image" id="liftclickbutton" height= 100px width = 100px src=images/arrows/up.png onclick="">
+</div>
+
+
+<div class=delift>
+	<input type="image" id="lowclickbutton" height= 100px width = 100px src=images/arrows/down.png onclick="">
+</div>
+<div class=findhome>
+	<input type="image" height= 100px width = 100px src=images/arrows/findhome.png onclick="">
+</div>
+
+<div class=gotohome>
+	<input type="image" height= 100px width = 100px src=images/arrows/movehome.png onclick="">
+</div>
+
+</div>
+<!---src stuff-------------------------------------------------------------------------------------------------------->
+<script src="https://cdn.jsdelivr.net/npm/farmbot@latest/dist/farmbot_single_file.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.min.js" type="text/javascript"></script>
+
+<script src="page1.js">
+import { Farmbot } from "farmbot";
+
+</script>
+</body>
+</html> 
